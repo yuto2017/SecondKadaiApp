@@ -21,7 +21,7 @@ class ResultViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        // 上記では、x, y を 0 と宣言していたが、
+        // 上記では、text_nameを 空白 と宣言していたが、
         // 1画面目のViewControllerから遷移するときにprepareForSegueで
         // text_nameの値を新たに代入される
         let result = text_name
