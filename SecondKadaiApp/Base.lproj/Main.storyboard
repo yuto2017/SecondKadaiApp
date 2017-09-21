@@ -21,31 +21,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q5N-Um-ZNy">
-                                <rect key="frame" x="93" y="85" width="189" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q5N-Um-ZNy">
+                                <rect key="frame" x="87.5" y="100.5" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="g4E-4w-jLg"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INh-d9-45q">
-                                <rect key="frame" x="87" y="34" width="201" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuX-ib-E4k">
-                                <rect key="frame" x="142" y="141" width="84" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuX-ib-E4k">
+                                <rect key="frame" x="149" y="145.5" width="77" height="30"/>
                                 <state key="normal" title="名前を表示"/>
                                 <connections>
                                     <action selector="showname:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WS8-7F-cP2"/>
                                     <segue destination="pSa-RY-IW8" kind="show" id="P2z-5F-Dlz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INh-d9-45q">
+                                <rect key="frame" x="87.5" y="50" width="200" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="29T-jC-Qwc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iuX-ib-E4k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="97m-wA-rM0"/>
+                            <constraint firstItem="INh-d9-45q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="DhK-Uz-s3Q"/>
+                            <constraint firstItem="iuX-ib-E4k" firstAttribute="top" secondItem="q5N-Um-ZNy" secondAttribute="bottom" constant="15" id="UQU-Nu-pDO"/>
+                            <constraint firstItem="q5N-Um-ZNy" firstAttribute="top" secondItem="INh-d9-45q" secondAttribute="bottom" constant="15" id="fSf-N6-egN"/>
+                            <constraint firstItem="q5N-Um-ZNy" firstAttribute="top" secondItem="INh-d9-45q" secondAttribute="bottom" constant="30" id="iuI-Nc-bnS"/>
+                            <constraint firstItem="q5N-Um-ZNy" firstAttribute="top" secondItem="INh-d9-45q" secondAttribute="bottom" constant="30" id="jjc-hn-xCb"/>
+                            <constraint firstItem="iuX-ib-E4k" firstAttribute="top" secondItem="q5N-Um-ZNy" secondAttribute="bottom" constant="15" id="kPW-u5-S9L"/>
+                            <constraint firstItem="q5N-Um-ZNy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nYM-OO-sZQ"/>
+                            <constraint firstItem="INh-d9-45q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zlp-5a-Cts"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="input_name" destination="q5N-Um-ZNy" id="Ziw-JW-cCv"/>
@@ -67,16 +81,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0O-fT-FZX">
-                                <rect key="frame" x="67" y="48" width="239" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0O-fT-FZX">
+                                <rect key="frame" x="87.5" y="50" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="CcS-2o-VcK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWe-AX-W5b">
-                                <rect key="frame" x="165" y="94" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWe-AX-W5b">
+                                <rect key="frame" x="172" y="86" width="31" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="wd7-3R-qXh" kind="unwind" unwindAction="unwind:" id="Fln-q4-Vkd"/>
@@ -84,6 +99,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IWe-AX-W5b" firstAttribute="centerX" secondItem="2Uz-lh-cyf" secondAttribute="centerX" id="MWV-RZ-YMT"/>
+                            <constraint firstItem="D0O-fT-FZX" firstAttribute="top" secondItem="cgX-BX-oCN" secondAttribute="bottom" constant="30" id="dkz-R2-em7"/>
+                            <constraint firstItem="IWe-AX-W5b" firstAttribute="top" secondItem="D0O-fT-FZX" secondAttribute="bottom" constant="15" id="gec-NQ-wya"/>
+                            <constraint firstItem="D0O-fT-FZX" firstAttribute="centerX" secondItem="2Uz-lh-cyf" secondAttribute="centerX" id="oZn-If-TL7"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="label_show_name" destination="D0O-fT-FZX" id="sIA-YF-ChE"/>

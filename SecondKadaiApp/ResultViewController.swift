@@ -25,7 +25,7 @@ class ResultViewController: UIViewController {
         // 1画面目のViewControllerから遷移するときにprepareForSegueで
         // text_nameの値を新たに代入される
         let result = text_name
-        label_show_name.text = "入力した名前は \(result) です"
+        label_show_name.text = "こんにちは \(result) さん"
         
     }
 
